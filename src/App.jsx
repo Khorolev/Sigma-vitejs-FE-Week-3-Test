@@ -3,9 +3,11 @@ import { TodoContext } from "./TodoContext";
 import TodoList from "./TodoList";
 
 export default function App() {
+  const [todos, setTodos] = useState([]);
+
   return (
     <>
-      <TodoContext.Provider context={TodoContext}>
+      <TodoContext.Provider value={{ todos, setTodos }}>
         <TodoList />
       </TodoContext.Provider>
     </>

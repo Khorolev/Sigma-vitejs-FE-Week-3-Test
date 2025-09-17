@@ -4,7 +4,7 @@ import { TodoContext } from "./TodoContext";
 export default function TodoList() {
   const todos = useContext(TodoContext).todos;
   const setTodos = useContext(TodoContext).setTodos;
-  const [inputTodo, setInputTodo] = useState();
+  const [inputTodo, setInputTodo] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
